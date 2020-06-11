@@ -86,7 +86,7 @@ public class UserIOConsoleImpl implements UserIO {
         Scanner sc = new Scanner(System.in);
         //try {
         while (true) {        
-        System.out.print(prompt);        
+        System.out.println(prompt);        
         String input = sc.nextLine();        
         //-- Conversion from "String to Integer" --
         num = Integer.parseInt(input);        
