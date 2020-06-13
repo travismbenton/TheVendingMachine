@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest" time="0.032" errors="0" skipped="0">
+<testsuite tests="4" failures="1" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest" time="0.047" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.2+8"/>
@@ -59,8 +59,17 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testRemoveInventory" time="0.032"/>
-  <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testGetAllInventory" time="0"/>
+  <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testGetAllInventory" time="0.031"/>
+  <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testRemoveInventory" time="0">
+    <failure message="expected: &lt;1&gt; but was: &lt;3&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;3&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:147)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:327)
+	at com.sg.thevendingmachine.dao.VendingMachineDaoTest.testRemoveInventory(VendingMachineDaoTest.java:78)
+</failure>
+  </testcase>
   <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testGetInventory" time="0"/>
-  <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testAddInventory" time="0"/>
+  <testcase classname="com.sg.thevendingmachine.dao.VendingMachineDaoTest" name="com.sg.thevendingmachine.dao.VendingMachineDaoTest.testAddInventory" time="0.016"/>
 </testsuite>

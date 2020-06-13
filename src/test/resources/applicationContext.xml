@@ -17,6 +17,13 @@
          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
  
     <!-- Bean definitions go here -->    
-   
+    <!-- <constructor-arg ref=""/> -->
+    <bean id="daoStub" class="com.sg.thevendingmachine.dao.VendingMachineDaoStubImpl"/>
+    <bean id="auditDaoStub" class="com.sg.thevendingmachine.dao.VendingMachineAuditDaoStubImpl"/>
+    <bean id="serviceLayer" class="com.sg.thevendingmachine.service.VendingMachineServiceLayerImpl">
+        <constructor-arg ref="daoStub"/>
+        <constructor-arg ref="auditDaoStub"/>
+    </bean>
+    
 </beans>
 

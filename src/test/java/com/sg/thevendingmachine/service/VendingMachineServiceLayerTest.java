@@ -6,12 +6,10 @@
 package com.sg.thevendingmachine.service;
 
 import com.sg.thevendingmachine.dao.VendingMachineAuditDao;
-import com.sg.thevendingmachine.dao.VendingMachineAuditDaoFileImpl;
+import com.sg.thevendingmachine.dao.VendingMachineAuditDaoStubImpl;
 import com.sg.thevendingmachine.dao.VendingMachineDao;
 import com.sg.thevendingmachine.dao.VendingMachineDaoStubImpl;
-import com.sg.thevendingmachine.dao.VendingMachinePersistenceException;
 import com.sg.thevendingmachine.dto.Inventory;
-import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,6 +19,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  *
@@ -31,10 +31,14 @@ public class VendingMachineServiceLayerTest {
     private VendingMachineServiceLayer service;
     
     public VendingMachineServiceLayerTest() {
-        VendingMachineDao dao = new VendingMachineDaoStubImpl();
-        VendingMachineAuditDao auditDao = new VendingMachineAuditDaoFileImpl();
         
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        service = ctx.getBean("serviceLayer", VendingMachineServiceLayer.class);
+        
+        /*VendingMachineDao dao = new VendingMachineDaoStubImpl();
+        VendingMachineAuditDao auditDao = new VendingMachineAuditDaoStubImpl();        
         service = new VendingMachineServiceLayerImpl(dao, auditDao);
+        */
     }
     
     @BeforeAll
@@ -154,18 +158,9 @@ public class VendingMachineServiceLayerTest {
             fail("Expected VendingMachineInsufficientFundsException; not thrown");
             } catch (VendingMachineInsufficientFundsException e) {
             return;
-            }
-                      
-    }
-    
+            }                      
+    }    
 
-    /**
-     * Test of auditLog method, of class VendingMachineServiceLayer.
-     */
-    @Test
-    public void testAuditLog() throws Exception {
-    }
-
-    
+        
     
 }
