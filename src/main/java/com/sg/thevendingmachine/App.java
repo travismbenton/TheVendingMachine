@@ -19,6 +19,8 @@ import com.sg.thevendingmachine.service.VendingMachineServiceLayerImpl;
 import com.sg.thevendingmachine.ui.UserIO;
 import com.sg.thevendingmachine.ui.UserIOConsoleImpl;
 import com.sg.thevendingmachine.ui.VendingMachineView;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 
@@ -28,10 +30,15 @@ import com.sg.thevendingmachine.ui.VendingMachineView;
  */
 public class App {
     
-    public static void main(String[] args) throws VendingMachinePersistenceException, VendingMachineNoItemInventoryException, VendingMachineInsufficientFundsException {
-            //VendingMachineNoItemInventoryException, VendingMachineInsufficientFundsException {
+    public static void main(String[] args) throws VendingMachinePersistenceException, 
+            VendingMachineNoItemInventoryException, VendingMachineInsufficientFundsException {
+            
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        VendingMachineController controller = ctx.getBean("controller", VendingMachineController.class);
+        controller.run();
+        controller.productMenu();
         
-        UserIO myIO = new UserIOConsoleImpl();
+        /*UserIO myIO = new UserIOConsoleImpl();
         Change myChange = new Change();
         VendingMachineView myView = new VendingMachineView(myIO, myChange);
         VendingMachineDao myDao = new VendingMachineDaoFileImpl();
@@ -41,6 +48,6 @@ public class App {
                 new VendingMachineController(myService, myView);        
        controller.run();
        controller.productMenu();
-        
+       */ 
     }
 }
