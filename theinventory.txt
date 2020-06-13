@@ -1,3 +1,2 @@
-Pants::50::12
-Belts::50::12
-Shoes::50::12
+Chips::.50::0
+Candy Bar::.75::1

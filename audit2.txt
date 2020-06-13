@@ -1,24 +1,36 @@
-2020-06-05T03:17:44.455960400 : New inventory Tester CREATED.
-2020-06-05T03:25:47.610980700 : New inventory Hi REMOVED.
-2020-06-05T03:25:59.239791200 : New inventory Tester REMOVED.
-2020-06-05T03:26:21.537445700 : Inventory Chips EDITED.
-2020-06-05T03:27:16.594521400 : Chips: Vended. Items Remaining: 4
-2020-06-05T03:28:49.595283300 : Chips: Vended. Items Remaining: 3
-2020-06-05T03:29:13.811935500 : Chips: Vended. Items Remaining: 2
-2020-06-05T03:29:30.367800300 : Chips: Vended. Items Remaining: 1
-2020-06-05T03:30:03.743250400 : Chips: Vended. Items Remaining: 0
-2020-06-05T19:35:34.254490600 : New inventory Bags REMOVED.
-2020-06-05T19:35:34.270112900 : New inventory None REMOVED.
-2020-06-05T19:35:34.270112900 : New inventory Skirts CREATED.
-2020-06-05T19:43:27.888748600 : New inventory Shoes REMOVED.
-2020-06-05T19:43:35.278806 : New inventory Pants REMOVED.
-2020-06-05T19:44:25.664918300 : New inventory Chips CREATED.
-2020-06-05T19:45:13.078548200 : Chips: Vended. Items Remaining: 4
-2020-06-05T19:46:39.495879900 : Chips: Vended. Items Remaining: 3
-2020-06-12T17:02:49.538019100 : Inventory Chips EDITED.
-2020-06-13T11:36:10.087633100 : New inventory Skirts CREATED.
-2020-06-13T11:36:10.087633100 : New inventory Bags REMOVED.
-2020-06-13T11:36:10.087633100 : New inventory None REMOVED.
-2020-06-13T12:10:38.977412400 : New inventory Bags REMOVED.
-2020-06-13T12:10:38.977412400 : New inventory None REMOVED.
-2020-06-13T12:10:38.977412400 : New inventory Skirts CREATED.
+2020-06-13T13:16:03.857825300 : Inventory Chips EDITED.
+2020-06-13T13:16:24.783666500 : Insufficient Funds.
+2020-06-13T13:16:36.732844400 : Insufficient Funds.
+2020-06-13T13:16:41.716512700 : Insufficient Funds.
+2020-06-13T13:16:49.268154600 : Chips: Vended. Items Remaining: 0
+2020-06-13T13:16:49.268154600 : Chips: No Inventory.
+2020-06-13T13:18:27.530161600 : New inventory Candy Bar CREATED.
+2020-06-13T13:18:43.711718300 : Chips: No Inventory.
+2020-06-13T13:18:57.144496400 : Candy Bar: Vended. Items Remaining: 4
+2020-06-13T13:20:36.780166800 : Inventory Chips EDITED.
+2020-06-13T13:20:48.197824900 : Chips: Vended. Items Remaining: 0
+2020-06-13T13:20:48.198828400 : Chips: No Inventory.
+2020-06-13T13:20:56.199013100 : Chips: No ** Inventory.
+2020-06-13T13:23:47.326454800 : New inventory Candy Bar CREATED.
+2020-06-13T13:25:06.141011300 : Chips: No ** Inventory.
+2020-06-13T13:25:16.916215 : Candy Bar: Vended. Items Remaining: 4
+2020-06-13T13:27:40.727678300 : Inventory Chips EDITED.
+2020-06-13T13:28:16.706464800 : New inventory Candy Bar CREATED.
+2020-06-13T13:28:39.054059600 : Insufficient Funds.
+2020-06-13T13:28:44.315637200 : Candy Bar: Vended. Items Remaining: 2
+2020-06-13T13:28:55.900535700 : Chips: Vended. Items Remaining: 0
+2020-06-13T13:28:55.901572700 : Chips: No Available Inventory.
+2020-06-13T13:29:03.288615200 : Chips: *No Inventory*
+2020-06-13T13:29:13.615156600 : Candy Bar: Vended. Items Remaining: 1
+2020-06-13T13:41:25.435881100 : Chips: *No Inventory*
+2020-06-13T13:41:28.571091700 : Chips: *No Inventory*
+2020-06-13T13:41:38.834068800 : Candy Bar:Insufficient Funds.
+2020-06-13T13:41:45.288521 : Candy Bar:Insufficient Funds.
+2020-06-13T13:41:52.710878900 : Candy Bar: Vended. Items Remaining: 0
+2020-06-13T13:41:52.710878900 : Candy Bar: No Available Inventory.
+2020-06-13T14:04:40.325979600 : Inventory Candy Bay EDITED.
+2020-06-13T14:05:09.767082400 : New inventory Candy Bay REMOVED.
+2020-06-13T14:05:37.206371300 : Inventory Candy Bar EDITED.
+2020-06-13T14:05:56.110555400 : Chips: *No Inventory*
+2020-06-13T14:06:08.344366 : Candy Bar: Insufficient Funds.
+2020-06-13T14:06:15.236580500 : Candy Bar: Vended. Items Remaining: 1

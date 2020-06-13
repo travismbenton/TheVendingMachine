@@ -271,7 +271,7 @@ public class VendingMachineController {
         boolean hasErrors = false;
         do {                
             try {
-                userMoney = service.validatePrice(itemPrice);
+                userMoney = service.validatePrice(itemPrice, nameOfItem);
                 
                 hasErrors = false;
             } catch (VendingMachineInsufficientFundsException e) {                      
@@ -308,7 +308,7 @@ public class VendingMachineController {
         boolean hasErrors = false;
         do {                
             try {
-                userMoney = service.validatePrice(itemPrice);
+                userMoney = service.validatePrice(itemPrice, nameOfItem);
                 
                 hasErrors = false;
             } catch (VendingMachineInsufficientFundsException e) { 
@@ -346,7 +346,7 @@ public class VendingMachineController {
         boolean hasErrors = false;
         do {                
             try {
-                userMoney = service.validatePrice(itemPrice);
+                userMoney = service.validatePrice(itemPrice, nameOfItem);
                 
                 hasErrors = false;
             } catch (VendingMachineInsufficientFundsException e) { 
@@ -384,7 +384,7 @@ public class VendingMachineController {
         boolean hasErrors = false;
         do {                
             try {
-                userMoney = service.validatePrice(itemPrice);
+                userMoney = service.validatePrice(itemPrice, nameOfItem);
                 
                 hasErrors = false;
             } catch (VendingMachineInsufficientFundsException e) { 
@@ -422,7 +422,7 @@ public class VendingMachineController {
         boolean hasErrors = false;
         do {                
             try {
-                userMoney = service.validatePrice(itemPrice);
+                userMoney = service.validatePrice(itemPrice, nameOfItem);
                 
                 hasErrors = false;
             } catch (VendingMachineInsufficientFundsException e) { 

@@ -43,8 +43,7 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
         }
         validateItemData(inventory);
         dao.addInventory(inventory.getItemName(), inventory);
-        auditDao.writeAuditEntry(
-                "New inventory "+inventory.getItemName()+" CREATED.");
+        auditDao.writeAuditEntry("New inventory "+inventory.getItemName()+" CREATED.");
     } 
     
     @Override
@@ -52,8 +51,7 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
             VendingMachineDataValidationException {
         validateItemData(inventory);
         dao.addInventory(inventory.getItemName(), inventory);
-        auditDao.writeAuditEntry(
-                "Inventory "+ inventory.getItemName() + " EDITED.");
+        auditDao.writeAuditEntry("Inventory "+ inventory.getItemName() + " EDITED.");
     }
     
 
@@ -73,8 +71,7 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
     public Inventory removeInventory(String itemName) throws 
             VendingMachinePersistenceException {
         Inventory removedInventory = dao.removeInventory(itemName);
-        auditDao.writeAuditEntry(
-                "New inventory "+itemName+" REMOVED.");
+        auditDao.writeAuditEntry("New inventory "+itemName+" REMOVED.");
         return dao.removeInventory(itemName);
     }
     
@@ -107,10 +104,11 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
             || nameOfItem.equalsIgnoreCase("Candy Bar") && itemsRemaining == 0    
             || nameOfItem.equalsIgnoreCase("Soda") && itemsRemaining == 0 
             || nameOfItem.equalsIgnoreCase("Sandwich") && itemsRemaining == 0
-            || nameOfItem.equalsIgnoreCase("Cookies") && itemsRemaining == 0){
+            || nameOfItem.equalsIgnoreCase("Cookies") && itemsRemaining == 0){            
             
+            auditDao.writeAuditEntry(nameOfItem + ": *No Inventory*");
             throw new VendingMachineNoItemInventoryException(""
-                +"Please make another selection.");            
+                +"Please make another selection.");                
         }  else {
                  System.out.println(" Available for purchase!");
             } 
@@ -118,7 +116,7 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
     
        
 @Override
-    public double validatePrice(double itemPrice) throws 
+    public double validatePrice(double itemPrice, String nameOfItem) throws 
         VendingMachinePersistenceException, VendingMachineInsufficientFundsException {
            
            double userMoney;           
@@ -128,6 +126,7 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
            userMoney = sc.nextDouble();      
            
        if (userMoney < itemPrice){
+           auditDao.writeAuditEntry(nameOfItem + ": Insufficient Funds.");
             throw new VendingMachineInsufficientFundsException(""
                 +"InsufficientFundsException. "+userMoney );
        } 
@@ -159,6 +158,10 @@ public VendingMachineServiceLayerImpl( VendingMachineDao dao,
                
             auditDao.writeAuditEntry(
                 nameOfItem+": Vended. Items Remaining: "+itemsRemaining);
+            
+            if(itemsRemaining == 0){
+                auditDao.writeAuditEntry(nameOfItem + ": No Available Inventory.");
+            }
             
             String numberOfItemsInInventory = String.valueOf(itemsRemaining);
             

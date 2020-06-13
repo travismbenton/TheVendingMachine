@@ -36,7 +36,7 @@ public interface VendingMachineServiceLayer {
    public void validateItemInInventory(int itemsRemaining, String nameOfItem) throws 
         VendingMachinePersistenceException, VendingMachineNoItemInventoryException;
     
-    public double validatePrice(double itemPrice) throws 
+    public double validatePrice(double itemPrice, String nameOfItem) throws 
         VendingMachinePersistenceException, VendingMachineInsufficientFundsException;    
     
     public int auditLog(int itemsRemaining, String nameOfItem, String priceOfItem) 
