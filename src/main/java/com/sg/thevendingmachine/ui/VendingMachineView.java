@@ -67,7 +67,8 @@ public class VendingMachineView {
     }
     public void displayProductErrorMessage(String errorMsg) {
 	io.print("=== Out of stock! ===");
-	io.print(errorMsg);
+        io.print("* Please make another selection *");
+	//io.print(errorMsg);
     }    
     // -- "END" ERROR MESSAGE SECTION --
     

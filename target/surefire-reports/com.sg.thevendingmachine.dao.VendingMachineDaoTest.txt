@@ -1,13 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.sg.thevendingmachine.dao.VendingMachineDaoTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec <<< FAILURE!
-com.sg.thevendingmachine.dao.VendingMachineDaoTest.testRemoveInventory()  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:147)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:327)
-	at com.sg.thevendingmachine.dao.VendingMachineDaoTest.testRemoveInventory(VendingMachineDaoTest.java:78)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec

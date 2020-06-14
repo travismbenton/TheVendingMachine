@@ -154,7 +154,7 @@ public class VendingMachineServiceLayerTest {
     private void testValidatePrice() throws Exception {
              
         try {
-            service.validatePrice(.50);            
+            service.validatePrice(50, "Skirts");            
             fail("Expected VendingMachineInsufficientFundsException; not thrown");
             } catch (VendingMachineInsufficientFundsException e) {
             return;

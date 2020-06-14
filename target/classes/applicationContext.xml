@@ -32,7 +32,45 @@
     <bean id="controller" class="com.sg.thevendingmachine.controller.VendingMachineController">
         <constructor-arg ref="service"/>
         <constructor-arg ref="view"/>
-    </bean>   
+    </bean>
+    
+    <bean id="loggingAdvice" class="com.sg.thevendingmachine.advice.LoggingAdvice">
+        <constructor-arg ref="auditDao"/>
+    </bean>
+    
+    <aop:config>
+        <aop:aspect ref="loggingAdvice">
+            <aop:after-returning
+                method="createAuditEntry"
+                pointcut="execution(* com.sg.thevendingmachine.service.VendingMachineServiceLayer.createInventory(..))"
+            />
+         
+            <aop:after-returning
+                method="createAuditEntry"
+                pointcut="execution(* com.sg.thevendingmachine.service.VendingMachineServiceLayer.editInventory(..))"
+            />
+            
+            <aop:after-returning                
+                method="createAuditEntry"
+                pointcut="execution(* com.sg.thevendingmachine.service.VendingMachineServiceLayer.removeInventory(..))"
+            /> 
+            
+            <aop:after-throwing 
+            method="testAuditEntry"
+            pointcut="execution(* validateItemInInventory(..))"
+            throwing="error"
+            />                      
+        
+            <aop:after-throwing 
+            method="testAuditEntry"
+            pointcut="execution(* validatePrice(..))"
+            throwing="error"
+            />       
+ 
+        </aop:aspect>
+    </aop:config>
+
+      
    
 </beans>
 

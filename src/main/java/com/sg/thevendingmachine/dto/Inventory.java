@@ -78,4 +78,10 @@ public class Inventory {
         }
         return true;
     }
+    
+    @Override
+        public String toString() {
+        return "Item Name: " + itemName + " |Item Cost: " + itemCost + "  |Items Available: " + numberOfItemsInInventory;
+    }
+
 }

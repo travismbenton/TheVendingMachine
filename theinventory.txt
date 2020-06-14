@@ -1,2 +1,2 @@
 Chips::.50::0
-Candy Bar::.75::1
+Soda::.65::5

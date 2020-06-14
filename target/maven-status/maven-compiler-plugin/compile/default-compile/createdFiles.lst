@@ -12,6 +12,7 @@ com\sg\thevendingmachine\dao\VendingMachineDaoStubImpl.class
 com\sg\thevendingmachine\service\VendingMachineDuplicateItemException.class
 com\sg\thevendingmachine\dao\VendingMachineDao.class
 com\sg\thevendingmachine\ui\UserIOConsoleImpl.class
+com\sg\thevendingmachine\advice\LoggingAdvice.class
 com\sg\thevendingmachine\dto\Inventory.class
 com\sg\thevendingmachine\service\VendingMachineServiceLayerImpl.class
 com\sg\thevendingmachine\dao\VendingMachineAuditDao.class
