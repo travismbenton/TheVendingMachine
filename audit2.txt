@@ -4,3 +4,10 @@
 2020-06-13T21:55:21.899830500 : validatePrice: InsufficientFundsException :0.65Soda
 2020-06-13T21:57:40.969016800 : validateItemInInventory: VendingMachineNoItemInventoryException :0Chips
 2020-06-13T21:57:44.187910700 : validateItemInInventory: VendingMachineNoItemInventoryException :0Chips
+2020-06-16T19:43:07.639838900 : removeInventory: Pants
+2020-06-16T19:43:13.968139600 : removeInventory: Shoes
+2020-06-16T19:43:36.095919100 : createInventory: Item Name: Chips |Item Cost: .50  |Items Available: 2
+2020-06-16T19:43:50.241588300 : createInventory: Item Name: Soda |Item Cost: .65  |Items Available: 5
+2020-06-16T19:45:13.831557100 : validatePrice: InsufficientFundsException :0.5Chips
+2020-06-16T19:46:07.971305200 : validateItemInInventory: NoItemInventoryException :0Chips
+2020-06-16T19:46:13.320795600 : validateItemInInventory: NoItemInventoryException :0Chips
